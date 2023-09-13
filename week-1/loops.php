@@ -58,11 +58,36 @@
 
 // foreach loop
 
-$names = ['Masud', 'Rana', 'Shainur'];
+// $names = ['Masud', 'Rana', 'Shainur'];
 
-foreach($names as $key => $name) {
-    echo "$key- $name <br>";
+// foreach($names as $key => $name) {
+//     echo "$key- $name <br>";
+// }
+
+$posts = [
+    [
+        'post_id' => 1,
+        'title' => 'Introduction to PHP',
+        'content' => 'In this post, we will cover the basics of php',
+        'comments' => [
+            ['comment_id' => 101, 'user' => 'masud', 'massage' => 'Hello Bangladesh'],
+            ['comment_id' => 102, 'user' => 'Rana', 'massage' => 'Hello Khulna'],
+        ],
+    ],
+];
+
+
+foreach($posts as $post) {
+    echo "Post title: {$post['title']}<br>";
+    echo "Post content: {$post['content']}<br>";
+
+    echo "Comments: <br>";
+    foreach($post['comments'] as $comment) {
+        echo "User: {$comment['user']}, Massage: {$comment['massage']} <br>";
+        echo "<br>";
+    }
+    echo "<hr><br>";
+
 }
-
 
 
