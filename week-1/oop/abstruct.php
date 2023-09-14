@@ -1,5 +1,6 @@
 <?php
-
+#! usr/env php
+$number = readline("Please enter a number");
     abstract class Vehicle {
         abstract public function getBaseFare(): int;
 
