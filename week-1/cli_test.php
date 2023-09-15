@@ -1,6 +1,10 @@
 <?php
 
-    $number = rand(1, 100);
+    $options = getopt(short_options: '', ['min::', 'max::']);
+    $min = (int) ($options['min'] ?? 1);
+    $max = (int) ($options['max'] ?? 100);
+
+    $number = rand($min, $max);
 
     
 
