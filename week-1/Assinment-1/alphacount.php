@@ -1,3 +1,4 @@
+#! D:\xampp\php\php.exe
 <?php
 
 

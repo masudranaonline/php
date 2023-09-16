@@ -1,3 +1,4 @@
+#! D:\xampp\php\php.exe
 <?php
 
     require_once 'classes/Income.php';
@@ -53,31 +54,41 @@
         $obj->store($input);
     }
     function viewIncome() {
-        $totalIncome = 0;
-        $lines = file('./data/incomes.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $obj = new Income();
+        $incomes = $obj->viewIncome();
+        $totalIncome = $obj->totalIncome();
+        
         print "-------------------------------\n";
-        foreach($lines as $line) {
-            $array = explode('-', $line);
-            $totalIncome += (int) $array[1];
-            print $line.PHP_EOL;
+        foreach($incomes as $income) {
+            print $income.PHP_EOL;
         }
         print "-------------------\n";
         print "Total Income: {$totalIncome}\n";
         print "-------------------------------\n";
     }
     function viewExpense() {
-        $totalExpense = 0;
-        $lines = file('./data/expense.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $obj = new Expense();
+        $expenses = $obj->viewExpense();
+        $totalExpense = $obj->totalExpense();
+        
         print "-------------------------------\n";
-        foreach($lines as $line) {
-            $array = explode('-', $line);
-            $totalExpense += (int) $array[1];
-            print $line.PHP_EOL;
+        foreach($expenses as $expense) {
+            print $expense.PHP_EOL;
         }
         print "-------------------\n";
         print "Total Expense: {$totalExpense}\n";
         print "-------------------------------\n";
     }
     function viewSaving() {
+        $objIncome = new Income();
+        $objExpense = new Expense();
 
+        $totalIncome = $objIncome->totalIncome();
+        $totalExpense = $objExpense->totalExpense();
+
+        $saving = $totalIncome - $totalExpense;
+
+        print "-------------------------------\n";
+        print "Total Saving: {$saving}\n";
+        print "-------------------------------\n";
     }
