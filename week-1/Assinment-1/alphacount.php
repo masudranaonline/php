@@ -7,8 +7,8 @@
     $count = 0;
     $length = strlen($userInput);
 
-    for($i = 0; $i < $length; $i++){
-        if(ctype_alpha($userInput[$i])){
+    for ($i = 0; $i < $length; $i++) {
+        if(ctype_alpha($userInput[$i])) {
             $count++;
         }
     }
