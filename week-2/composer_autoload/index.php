@@ -10,3 +10,5 @@ use App\classes\Bus;
     $car = new Car();
     $bike = new Bike();
     $bus = new Bus();
+    claculate();
+    sayHi();
