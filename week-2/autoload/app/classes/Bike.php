@@ -1,8 +1,8 @@
 <?php
 
-    class Car {
+    class Bike {
         public function __construct()
         {
-            print "This is Car";
+            print "This is Bike".PHP_EOL;
         }
     }

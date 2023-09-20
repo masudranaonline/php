@@ -3,6 +3,6 @@
     class Bus {
         public function __construct()
         {
-            print "This is Bus";
+            print "This is Bus".PHP_EOL;
         }
     }
