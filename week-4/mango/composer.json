@@ -1,0 +1,18 @@
+{
+    "name": "masudranaonline/mango",
+    "description": "World's simplest PHP MVC Framework",
+    "type": "framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Masud Rana",
+            "email": "masudranaonline75@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
