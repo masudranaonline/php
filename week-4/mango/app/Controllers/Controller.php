@@ -1,11 +1,9 @@
 <?php
 
-    namespace App\Controller;
+    namespace App\Controllers;
 
-    class Contdroller 
+    class Controller 
     {
-        public function __construct()
-        {
-            echo "CONSTRUCTED";
-        }
+
+
     }
