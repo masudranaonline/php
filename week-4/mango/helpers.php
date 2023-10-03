@@ -1,5 +1,9 @@
 <?php
 
+    function redirect($location) {
+        header("Location:$location");
+    }
+
  function view(string $view, array $data = []) {
 
     extract($data);      

@@ -12,7 +12,11 @@
     <?php echo $massage; ?>
     <?php print_r($users); ?>
 
-
+    <pre>
+        <?php
+            print_r($book);
+        ?>
+    </pre>
     
 </body>
 </html>
